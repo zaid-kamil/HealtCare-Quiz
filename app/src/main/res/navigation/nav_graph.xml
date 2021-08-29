@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcome">
+    <fragment
+        android:id="@+id/welcome"
+        android:name="com.podium.healtcarequiz.WelcomeFragment"
+        android:label="Welcome"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcome_to_quiz_1Fragment"
+            app:destination="@id/quiz_1Fragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/quiz_1Fragment"
+        android:name="com.podium.healtcarequiz.Quiz_1Fragment"
+        android:label="Quiz 2"
+        tools:layout="@layout/fragment_quiz_1">
+        <action
+            android:id="@+id/action_quiz_1Fragment_to_quiz_2Fragment"
+            app:destination="@id/quiz_2Fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_quiz_1Fragment_to_gameOverFragment"
+            app:destination="@id/gameOverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quiz_2Fragment"
+        android:name="com.podium.healtcarequiz.Quiz_2Fragment"
+        android:label="Quiz 2"
+        tools:layout="@layout/fragment_quiz_2">
+        <action
+            android:id="@+id/action_quiz_2Fragment_to_scoreFragment"
+            app:destination="@id/success" />
+        <action
+            android:id="@+id/action_quiz_2Fragment_to_gameOverFragment"
+            app:destination="@id/gameOverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/success"
+        android:name="com.podium.healtcarequiz.SuccessFragment"
+        android:label="Success"
+        tools:layout="@layout/fragment_success" />
+    <fragment
+        android:id="@+id/gameOverFragment"
+        android:name="com.podium.healtcarequiz.GameOverFragment"
+        android:label="fragment_game_over"
+        tools:layout="@layout/fragment_game_over" />
+</navigation>
