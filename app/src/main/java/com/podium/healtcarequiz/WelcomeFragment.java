@@ -29,5 +29,9 @@ public class WelcomeFragment extends Fragment {
         binding.btnStart.setOnClickListener(v -> {
             NavHostFragment.findNavController(this).navigate(R.id.action_welcome_to_quiz_1Fragment);
         });
+        binding.btnStart.setOnLongClickListener(v -> {
+            NavHostFragment.findNavController(this).navigate(R.id.action_welcome_to_readingListFragment);
+            return true;
+        });
     }
 }

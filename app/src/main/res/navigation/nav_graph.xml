@@ -16,6 +16,9 @@
             app:exitAnim="@android:anim/slide_out_right"
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_welcome_to_readingListFragment"
+            app:destination="@id/readingListFragment" />
     </fragment>
     <fragment
         android:id="@+id/quiz_1Fragment"
@@ -53,4 +56,9 @@
         android:name="com.podium.healtcarequiz.GameOverFragment"
         android:label="fragment_game_over"
         tools:layout="@layout/fragment_game_over" />
+    <fragment
+        android:id="@+id/readingListFragment"
+        android:name="com.podium.healtcarequiz.ReadingListFragment"
+        android:label="Usefull Websites"
+        tools:layout="@layout/fragment_reading_list" />
 </navigation>
